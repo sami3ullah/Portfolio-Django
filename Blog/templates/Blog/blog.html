@@ -1,6 +1,5 @@
 
-<!DOCTYPE HTML>
-{% load staticfiles %}
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -35,11 +34,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
-          <a class="nav-item nav-link" href="#">Blog</a>
-          <a class="nav-item nav-link" href="#">LinkedIn</a>
+          <a class="nav-item nav-link" href="#">LinkedIn<span class="sr-only">(current)</span></a>
           <a class="nav-item nav-link" href="#">Facebook</a>
           <a class="nav-item nav-link" href="#">Twitter</a>
+          <a class="nav-item nav-link active" href="#">Blog</a>
         </div>
       </div>
     </nav>
@@ -47,31 +45,25 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
-    <div class="container">
-      <div class="col-xs-6">
-        <img src="{% static 'sami.jpg' %}" class="rounded-circle img-fluid" height="50px" width="100px" alt="My Picture"><br>
-      </div>
-      <h1 class="jumbotron-heading">Hi, I am Sami</h1>
-      <p class="lead text-muted">I love computer science. I graduated from Forman Christian College Lahore, Pakistan. Feel free to email me or check my projects.</p>
-      <p>
-        <a href="mailto:msami398@gmail.com" class="btn btn-primary my-2">Email Me</a>
-      </p>
-    </div>
-  </section>
+  <div class="container">
+    <h1 class="text-center pt-4">Welcome To My Blog Section</h1><br><br><br>
+      <h2>Latest Blog Posts</h2>
+      <hr>
+  </div>
+
 
 
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row">
-        {% for job in job.all %}
+        {% for blog in blog.all %}
         <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{{job.image.url}}" alt="Blog Picture" class="img-fluid">
+          <a href="#"><div class="card mb-4 shadow-sm">
+            <img src="{{blog.blog_image.url}}" alt="Blog Picture" class="img-fluid">
             <div class="card-body">
-              <p class="card-text">{{job.summary}}</p>
+              <p class="card-text font-weight-bold lead text-center">{{blog.title}}</p>
           </div>
-        </div>
+        </div></a>
       </div>
       {% endfor %}
     </div>
