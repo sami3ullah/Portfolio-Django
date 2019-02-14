@@ -12,6 +12,8 @@
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'main.css' %}">
 
     <style>
       .bd-placeholder-img {
@@ -28,61 +30,48 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Muhammad Samiullah</a>
+      <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+      <a class="navbar-brand" id="brand" href="{% url 'home' %}">MUHAMMAD SAMIULLAH</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
-          <a class="nav-item nav-link" href="#">Blog</a>
-          <a class="nav-item nav-link" href="#">LinkedIn</a>
-          <a class="nav-item nav-link" href="#">Facebook</a>
-          <a class="nav-item nav-link" href="#">Twitter</a>
+          <a class="nav-item nav-link" id="bootstrap-overwrite" href="{% static 'resume.pdf' %}">Resume</a>
+          <a class="nav-item nav-link" id="bootstrap-overwrite" href="{% url 'blog' %}">Projects</a>
+          <a class="nav-item nav-link" id="bootstrap-overwrite" href="{% url 'blog' %}">Blog</a>
+          <a class="nav-item nav-link" id="bootstrap-overwrite" href="https://www.linkedin.com/in/sami3ullah/"><i class="fab fa-linkedin" style="font-size:20px; margin-right:6px;"></i></a>
+          <a class="nav-item nav-link" id="bootstrap-overwrite" href="https://www.facebook.com/samiullahstories"><i class="fab fa-facebook-square" style="font-size:20px; margin-right:6px;"></i></a>
+          <a class="nav-item nav-link" id="bootstrap-overwrite" href="https://twitter.com/samistories"><i class="fab fa-twitter" style="font-size:20px;"></i></a>
         </div>
       </div>
     </nav>
   </header>
 
 <main role="main">
-
-  <section class="jumbotron text-center">
+  <section class="jumbotron text-center" id="section">
     <div class="container">
-      <div class="col-xs-6">
-        <img src="{% static 'sami.jpg' %}" class="rounded-circle img-fluid" height="50px" width="100px" alt="My Picture"><br>
+      <div class="col-xs-6" id="main-pic">
+        <img src="{% static 'images/me2.png' %}" class="img-fluid" height="80px" width="150px" alt="My Picture">
       </div>
-      <h1 class="jumbotron-heading">Hi, I am Sami</h1>
-      <p class="lead text-muted">I love computer science. I graduated from Forman Christian College Lahore, Pakistan. Feel free to email me or check my projects.</p>
+
+      <h1 id="main-heading">Hi, I'm Sami!</h1>
+
+      <p id="story1">I am from a small city named Okara, Pakistan. I came to this beautiful city Lahore back in 2013. I love playing video games, love reading books of morality, love travelling and learning in general.</p>
+      <p id="story2">I'm passionate about Computer Science but crazy about PYTHON. That's why I built this website in Django. Also it's my first project in it.</p>
+      <p id="story3">Feel free to E-mail me. Do check my projects and come by everyday for a new blog. Glad to have you here!</p>
+
       <p>
-        <a href="mailto:msami398@gmail.com" class="btn btn-primary my-2">Email Me</a>
+        <a href="mailto:msami398@gmail.com" class="btn my-2" id="email">Email Me<i class="fas fa-envelope" style="padding-left:5px; font-size:18px;"></i></a>
       </p>
     </div>
   </section>
-
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        {% for job in job.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{{job.image.url}}" alt="Blog Picture" class="img-fluid">
-            <div class="card-body">
-              <p class="card-text">{{job.summary}}</p>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-
-
 </main>
 
-<footer class="text-muted">
+<footer id="footer">
   <div class="container text-center">
-    <p>&copy; Muhammad Samiullah {% now "Y" %}</p>
+    <p id="footer-p1">Built with <i class="fas fa-heart" style="font-size:15px; color:red; padding:0px 3px 0px 3px;"></i> in the beautiful city of Lahore, Pakistan.</p>
+    <p id="footer-p2">&copy; {% now "Y" %} by MUHAMMAD SAMIULLAH. All rights reserved</p>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -90,3 +79,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </html>
+<!--
+  <div class="album py-5">
+    <div class="container">
+      <div class="row">
+        {% for job in job.all %}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{job.image.url}}" alt="Blog Picture" class="img-fluid">
+            <div class="card-body">
+              <p class="card-text text-center">{{job.summary}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div> -->
