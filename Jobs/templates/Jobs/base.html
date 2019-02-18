@@ -1,5 +1,5 @@
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 {% load staticfiles %}
 <html lang="en">
   <head>
@@ -8,17 +8,17 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <title>Muhammad Samiullah</title>
 
     <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!-- Custome Css -->
+
+    <!-- Custom Css -->
 <link rel="stylesheet" href="{% static 'main.css' %}">
 
     <!-- Site Icon -->
-<link rel="shortcut icon" href="{% static 'images/small.ico' %}">
-
+<link rel="icon" href="{% static 'images/small.ico' %}">
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -53,29 +53,17 @@
   </header>
 
 <main role="main">
-  <section class="jumbotron text-center" id="section">
-    <div class="container">
-      <div class="col-xs-6" id="main-pic">
-        <img src="{% static 'images/me2.png' %}" class="img-fluid main-image" height="80px" width="150px" alt="My Picture">
-      </div>
+{% block body_block %}
 
-      <h1 id="main-heading">Hi, I'm Sami!</h1>
 
-      <p id="story1">I am from a small city named Okara, Pakistan. I came to this beautiful city Lahore back in 2013. I love playing video games, love reading books on morality, love travelling and learning in general.</p>
-      <p id="story2">I'm passionate about Computer Science and fell in love with PYTHON. That is why I have built this website in Django. Also it is my first project in it.</p>
-      <p id="story3">Feel free to E-mail me. Do check my projects and come by everyday for a new blog. Glad to have you here, Cheers!</p>
-
-      <p>
-        <a href="mailto:msami398@gmail.com" class="btn my-2" id="email">Email Me<i class="fas fa-envelope" style="padding-left:5px; font-size:18px;"></i></a>
-      </p>
-    </div>
-  </section>
+{% endblock %}
 </main>
 
 <footer id="footer">
   <div class="container text-center">
     <p id="footer-p1">Built with <i class="fas fa-heart" style="font-size:15px; color:red; padding:0px 3px 0px 3px;"></i> in the beautiful city of Lahore, Pakistan.</p>
     <p id="footer-p2">&copy; {% now "Y" %} by MUHAMMAD SAMIULLAH. All rights reserved</p>
+  </div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -83,19 +71,3 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </html>
-<!--
-  <div class="album py-5">
-    <div class="container">
-      <div class="row">
-        {% for job in job.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src="{{job.image.url}}" alt="Blog Picture" class="img-fluid">
-            <div class="card-body">
-              <p class="card-text text-center">{{job.summary}}</p>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div> -->

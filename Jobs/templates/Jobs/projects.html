@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "Jobs/base.html" %}
+  {% block body_block %}
+
+  <div class="container" id="main-text">
+    <h1 class="text-center pt-4 main-heading-project">Welcome to the Projects</h1><br><br><br>
+      <hr>
+  </div>
+
+  <div class="album py-5">
+    <div class="container">
+      <div class="row">
+        {% for job in job.all %}
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm" style="border: none;">
+              <img src="{{job.image.url}}" alt="Blog Picture" class="img-fluid">
+              <div class="card-body">
+                <p class="card-text text-center">{{job.summary}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+  {% endblock %}

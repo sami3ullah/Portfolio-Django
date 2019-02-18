@@ -62,8 +62,10 @@ body{
   opacity: 1;
   color: #ddd;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 17px;
+  margin-left: 10px;
   text-align: left;
+  text-align: justify;
 }
 
 #story2{
@@ -73,7 +75,8 @@ body{
   opacity: 1;
   color: #ddd;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 17px;
+  margin-left: 10px;
   text-align: left;
 }
 
@@ -84,8 +87,9 @@ body{
   opacity: 1;
   color: #ddd;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 17px;
   margin-bottom: 40px;
+  margin-left: 10px;
   text-align: left;
 }
 
@@ -139,9 +143,58 @@ body{
   background-size: cover;
   opacity: 0.19;
 
+
 }
 #brand{
   font-family: "Lato-Regular";
   font-size: 18px;
   letter-spacing: 0.5px;
+}
+
+a:hover{
+  text-decoration: none;
+
+}
+
+
+#main-text{
+  font-family: "Roboto-Regular";
+  margin-top: 20px;
+  color: #444;
+}
+
+#blog-title{
+  font-weight: 500;
+}
+
+#blog-date{
+  width: 100%;
+  font-family: "Roboto-light";
+  color: #2980bb;
+  margin-top: 5px;
+}
+
+.main-heading-project{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to bottom, #8b9098, #8391a5, #7a92b2, #6f92c0, #6293cd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blog-detail-p{
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+.detail-heading{
+  background-image: linear-gradient(to bottom, #8b9098, #8391a5, #7a92b2, #6f92c0, #6293cd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.detail-blog-image{
+  border-radius: 5px;
 }
