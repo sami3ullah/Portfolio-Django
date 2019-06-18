@@ -1,0 +1,199 @@
+*{
+  box-sizing: border-box;
+}
+
+/* CHANGE THE FONT */
+body{
+  font-family: Lato;
+}
+
+/* NAVBAR LINKS COLOR */
+#bootstrap-overwrite{
+  color:#f8f8f8;
+
+}
+
+#navbar{
+  background: #2980bb;
+  /* background: linear-gradient(to top, rgba(37,60,246,1) 1%, rgba(15,43,128,1) 100%); */
+}
+
+
+#bootstrap-overwrite:hover{
+  color: #ddd;
+}
+
+/* EMAIL ME CHANGES */
+#email{
+  position: relative;
+  color:#fff;
+  background: #2980bb;
+  z-index: 1;
+  /* background: linear-gradient(to top, rgba(37,60,246,1) 1%, rgba(15,43,128,1) 100%); */
+}
+
+#email:hover{
+  background:#2a70ab;
+}
+
+/* text */
+#main-heading{
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  color: #ddd;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+#main-pic{
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+#story1{
+  font-family: "Roboto-light";
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  color: #ddd;
+  line-height: 30px;
+  font-size: 17px;
+  margin-left: 10px;
+  text-align: left;
+  text-align: justify;
+}
+
+#story2{
+  font-family: "Roboto-light";
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  color: #ddd;
+  line-height: 30px;
+  font-size: 17px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+#story3{
+  font-family: "Roboto-light";
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  color: #ddd;
+  line-height: 30px;
+  font-size: 17px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+/* FOOTER */
+#footer{
+  /* background: #2980bb; */
+  height: 100%;
+  padding-bottom: 150px;
+  position: relative;
+}
+
+#footer-p1{
+  position: absolute;
+  color: #f8f8f8;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-family: "Lato-light";
+  padding-bottom: 60px;
+  color: #555;
+}
+
+#footer-p2{
+  padding-top: 40px;
+  position: absolute;
+  color: #f8f8f8;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  font-family: "Lato-light";
+  color: #555;
+}
+
+/* Section */
+#section{
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  position: relative;
+  border-radius: 0px;
+}
+
+#section::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: url("images/mosque.jpg");
+  background-size: cover;
+  opacity: 0.19;
+
+}
+#brand{
+  font-family: "Lato-Regular";
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+a:hover{
+  text-decoration: none;
+
+}
+
+
+#main-text{
+  font-family: "Roboto-Regular";
+  margin-top: 20px;
+  color: #444;
+}
+
+#blog-title{
+  font-weight: 500;
+}
+
+#blog-date{
+  width: 100%;
+  font-family: "Roboto-light";
+  color: #2980bb;
+  margin-top: 5px;
+}
+
+.main-heading-project{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  background-image: linear-gradient(to bottom, #8b9098, #8391a5, #7a92b2, #6f92c0, #6293cd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blog-detail-p{
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+.detail-heading{
+  background-image: linear-gradient(to bottom, #8b9098, #8391a5, #7a92b2, #6f92c0, #6293cd);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.detail-blog-image{
+  border-radius: 5px;
+}
