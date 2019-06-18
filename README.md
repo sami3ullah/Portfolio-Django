@@ -17,7 +17,7 @@ This app is being created with django. It's my personal project
 1) migrate your database by running "python manage.py makemigrations"
 2) then run "python manage.py migrate"
 3) then runserver by "python manage.py runserver"
-4) type in browser "127.0.0.1:3000"
+4) type in browser "127.0.0.1:8000"
 
 
 Congrats!!!
